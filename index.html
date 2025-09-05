@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+
+	<title>Advancing</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+
+<!-- <div class="container" >
+<header role="banner">
+</header>
+<main role="main">
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+    <div class="column has-text-centered">
+    <h3 class="title is-2 publication-title"> <b>JUCodec: An End-to-End Real-Time UNet-Style Codec for Joint Speech Compression and Enhancement</b></h3>
+    </div>
+
+</div>
+
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">Overview</h2>
+        </div>
+    </div>
+    <p style="font-size: 18px;">
+      End-to-end speech codecs enable low-bitrate communication but most of them typically lack integrated enhancement, limiting performance in noisy conditions. Although recent efforts have explored integrating speech enhancement into neural codecs, they either fail to achieve real-time performance or deliver lower quality than dedicated enhancement models, with word omissions being particularly noticeable. To address this, we propose JUCodec, a UNet-style model with a three-stage training strategy and latent frame corruption simulation to jointly perform compression and enhancement. Experiments show that JUCodec achieves strong noise suppression and intelligibility under low-bitrate, noisy scenarios.
+    </p>
+
+</div> -->
+
+<div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+
+    <section class="clean">
+    <h3 class="title is-3">Results on Clean Audio:</h3>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+			<thead>
+			<tr>
+            <th style="text-align: center">Codec</th>
+            <th style="text-align: center">Raw</th>
+            <th style="text-align: center">0.75 kbps</th>
+            <th style="text-align: center">3 kbps</th>
+            <th style="text-align: center">6 kbps</th>
+			</tr>
+			</thead>
+			<tbody>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>Proposed</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/uj075-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/uj3k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/uj6k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+        
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>SDCodec</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/sd075-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/sd3k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/sd6k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>NRVRVQ</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/nr075-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/nr3k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/nr6k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>SQCodec</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/sq075-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/sq3k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/sq6k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>DAC</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/dac075-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/dac3k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/clean/dac6k-2300_131720_000026_000000.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>    
+
+            </tbody>
+        </table>
+    </div>
+    </section>
+
+    <section class="noisy">
+    <h3 class="title is-3">Results on Noisy Audio:</h3>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+			<thead>
+			<tr>
+            <th style="text-align: center">Codec</th>
+            <th style="text-align: center">Raw</th>
+            <th style="text-align: center">0.75 kbps</th>
+            <th style="text-align: center">3 kbps</th>
+            <th style="text-align: center">6 kbps</th>
+			</tr>
+			</thead>
+			<tbody>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>Proposed</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/uj075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/uj3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/uj6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+        
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>SDCodec</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/sd075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/sd3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/sd6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>NRVRVQ</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/nr075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/nr3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/nr6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>M-SQCodec</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/msq075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/msq3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/msq6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>    
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>G-SQCodec</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/gsq075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/gsq3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/gsq6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>    
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>M-DAC</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/mdac075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/mdac3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/mdac6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>    
+
+            <tr>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><b>G-DAC</b></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/gdac075-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/gdac3k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            <td style="text-align: center;vertical-align:middle;width: 800px"><audio controls="controls" style="width: 140px;"><source src="reconstruction/denoise/gdac6k-p257_008.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+            </tr>    
+
+            </tbody>
+        </table>
+    </div>
+    </section>
+
+    <!-- Subsection Title -->
+    <section class="word-omit-section">
+    <h3 class="title is-3">Word-Omission Case Study</h3>
+    <p class="sublead">One noisy input paired with four enhanced variants. Each tile shows a playable audio clip and its corresponding mel-spectrogram.</p>
+
+    <!-- Grid: 1 input + 4 outputs -->
+    <div class="grid">
+        <figure class="tile">
+        <div class="label">(a) Noisy Input</div>
+        <img src="reconstruction/wordomit/input.png" alt="Mel-spectrogram of the noisy input" />
+        <audio controls preload="none" src="reconstruction/wordomit/input.wav" aria-label="Noisy input audio"></audio>
+        <figcaption>蔡英，原籍江西南昌县，移籍山东禹城县，明朝政治人物、进士出身。Cai4 Ying1, yuan2 ji2 Jiang1 Xi1 Nan2 Chang1 xian4, yi2 ji2 Shan1 Dong1 Yu3 Cheng2 xian4, Ming2 Chao2 zheng4 zhi4 ren2 wu4, jin4 shi4 chu1 shen1.</figcaption>
+        </figure>
+
+        <figure class="tile red-highlight">
+        <div class="label">(b) deepfilternet</div>
+        <img src="reconstruction/wordomit/deepfilternet.png" alt="Mel-spectrogram of deepfilternet output" />
+        <audio controls preload="none" src="reconstruction/wordomit/deepfilternet.wav" aria-label="deepfilternet output"></audio>
+        <figcaption>In the result, only the words "蔡英"(Cai Ying) remain audible, while nearly all other content is mistakenly suppressed.</figcaption>
+        </figure>
+
+        <figure class="tile">
+        <div class="label">(c) NRVRVQ</div>
+        <img src="reconstruction/wordomit/nrvrvq.png" alt="Mel-spectrogram of NRVRVQ output" />
+        <audio controls preload="none" src="reconstruction/wordomit/nrvrvq.wav" aria-label="NRVRVQ output"></audio>
+        <figcaption>The name "蔡英"(Cai Ying) is distorted into "蔡伊"(Cai Yi), with the final sound removed. In addition, the word "移"(yi) from "移籍"(yi ji) and the word "政"(zheng) from "政治人物"(zheng zhi ren wu) are dropped, and the remaining syllables are heavily deformed.</figcaption>
+        </figure>
+
+        <figure class="tile">
+        <div class="label">(d) SDCodec</div>
+        <img src="reconstruction/wordomit/sdcodec.png" alt="Mel-spectrogram of SDCodec output" />
+        <audio controls preload="none" src="reconstruction/wordomit/sdcodec.wav" aria-label="SDCodec output"></audio>
+        <figcaption>The name "蔡英"(Cai Ying) is distorted into "蔡伊"(Cai Yi). In addition, the word "人物"(ren wu) from "政治人物"(zheng zhi ren wu) is dropped.</figcaption>
+        </figure>
+
+        <figure class="tile green-highlight">
+        <div class="label">(d) UJCodec</div>
+        <img src="reconstruction/wordomit/ujcodec.png" alt="Mel-spectrogram of UJCodec output" />
+        <audio controls preload="none" src="reconstruction/wordomit/ujcodec.wav" aria-label="UJCodec output"></audio>
+        <figcaption>There is no severe or disturbing distortion.</figcaption>
+        </figure>
+
+    </div>
+    </section>
+
+<style>
+  .word-omit-section { 
+    max-width: 1100px; margin: 0 auto; padding: 1.25rem 1rem 0.5rem; 
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  .word-omit-section h2 { 
+    font-size: 1.5rem; margin: 0 0 0.25rem; line-height: 1.25; 
+  }
+  .word-omit-section .sublead { 
+    margin: 0 0 0.75rem; color: #444; font-size: 0.95rem; 
+  }
+  .grid { 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .tile { 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff; border: 1px solid #e7e7e7; border-radius: 10px; 
+    padding: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .tile.green-highlight { border-color: #28a745; box-shadow: 0 2px 8px rgba(40,167,69,0.25); }
+  .tile.red-highlight { border-color: #e00000; box-shadow: 0 2px 8px rgba(224,0,0,0.25); }
+  .tile.warn { border-color: #e08a00; }
+  .tile .label { 
+    font-weight: 600; font-size: 0.95rem;
+  }
+  .tile img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: #fafafa; border: 1px solid #f0f0f0; 
+  }
+  .tile audio { 
+    width: 100%;
+  }
+  .tile figcaption { 
+    font-size: 0.85rem; color: #555;
+    line-height: 1.35;
+  }
+</style>
+
+    <!-- Usage:
+    Replace the placeholder file paths under assets/audio and assets/mel with your actual files.
+    If you prefer a 1x5 single row on desktop, keep the default grid; for 2x3 layout, change grid-template-columns to repeat(3, 1fr) and add an empty spacer if needed.
+    -->
+
+
+</div>
