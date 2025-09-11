@@ -29,7 +29,7 @@
 
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
     <div class="column has-text-centered">
-    <h3 class="title is-2 publication-title"> <b>JUCodec: An End-to-End Real-Time UNet-Style Codec for Joint Speech Compression and Enhancement</b></h3>
+    <h3 class="title is-2 publication-title"> <b>UJCODEC: AN END-TO-END UNET-STYLE CODEC FOR JOINT SPEECH COMPRESSION AND ENHANCEMENT</b></h3>
     </div>
 
 </div>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <p style="font-size: 18px;">
-      End-to-end speech codecs enable low-bitrate communication but most of them typically lack integrated enhancement, limiting performance in noisy conditions. Although recent efforts have explored integrating speech enhancement into neural codecs, they either fail to achieve real-time performance or deliver lower quality than dedicated enhancement models, with word omissions being particularly noticeable. To address this, we propose JUCodec, a UNet-style model with a three-stage training strategy and latent frame corruption simulation to jointly perform compression and enhancement. Experiments show that JUCodec achieves strong noise suppression and intelligibility under low-bitrate, noisy scenarios.
+      End-to-end speech codecs enable low-bitrate communication but most of them typically lack integrated enhancement, limiting performance in noisy conditions. Although recent efforts have explored integrating speech enhancement into neural codecs, the decoded speech often exhibits noticeable distortions, with word omissions particularly pronounced, leading to significant degradations in intelligibility. To address this, we first propose a UNet-style model with waveform-based skip connections to preserve speech content during coding. We then employ a three-stage training strategy that builds on the codec’s compression capability while rapidly enhancing its robustness to noise. To further mitigate word omission distortions, we simulate latent frame corruption during training. Experiments show that UJCodec achieves strong noise suppression and intelligibility under low-bitrate, noisy scenarios.
     </p>
 
 </div>
