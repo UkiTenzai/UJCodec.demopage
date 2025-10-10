@@ -42,8 +42,8 @@
         </div>
     </div>
     <p style="font-size: 18px;">
-      End-to-end speech codecs enable low-bitrate communication but most of them typically lack integrated enhancement, limiting performance in noisy conditions. Although recent efforts have explored integrating speech enhancement into neural codecs, the decoded speech often exhibits noticeable distortions, with word omissions particularly pronounced, leading to significant degradations in intelligibility. To address this, we first propose a UNet-style model with waveform-based skip connections to preserve speech content during coding. We then employ a three-stage training strategy that builds on the codec’s compression capability while rapidly enhancing its robustness to noise. To further mitigate word omission distortions, we simulate latent frame corruption during training. Experiments show that UJCodec achieves strong noise suppression and intelligibility under low-bitrate, noisy scenarios.
-    </p>
+      End-to-end speech codecs enable low-bitrate communication but most of them typically lack integrated enhancement, limiting performance in noisy conditions. Although recent efforts have explored integrating speech enhancement into neural codecs, the decoded speech often exhibits noticeable distortions, with word omissions particularly pronounced, leading to significant degradations in intelligibility. To address this, we first propose a UNet-style model with skip connections designed to retain speech details throughout the coding process. We then employ a three-stage training strategy that builds on the codec’s compression capability while rapidly enhancing its robustness to noise. To further mitigate word omission distortions, we simulate latent frame corruption during training. Experiments show that UJCodec achieves strong noise suppression and high intelligibility under low-bitrate, noisy scenarios.
+	</p>
 
 </div>
 
